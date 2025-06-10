@@ -1,0 +1,7 @@
+handle /* {
+    import auth
+    reverse_proxy 10.0.0.22:8005 {
+        header_up X-Forwarded-Host {http.request.header.X-Forwarded-Host}
+        #header_up X-Username {http.request.header.X-Authentik-Username}
+    }
+}
