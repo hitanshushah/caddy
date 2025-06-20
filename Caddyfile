@@ -1,10 +1,3 @@
 import authentik
 
-:80 {
-    log {
-        output file /var/log/caddy/access.log
-        format json
-    }
-
-    import sites-enabled/*
-}
+import sites-enabled/*

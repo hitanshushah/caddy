@@ -1,0 +1,9 @@
+monopoly.local.hitanshushah.com {
+    #import auth
+    tls internal
+    reverse_proxy host.docker.internal:9000
+
+    log {
+        output file /data/access.log
+    }
+}
